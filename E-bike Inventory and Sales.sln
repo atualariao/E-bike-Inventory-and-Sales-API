@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33122.133
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EbikeInventoryandSalesAPI", "EbikeInventoryandSalesAPI.csproj", "{EF49C7C8-BF0D-421C-84E7-9F8CAD612A28}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{8C708156-39E4-43EA-9E5B-C303697F355A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EF49C7C8-BF0D-421C-84E7-9F8CAD612A28}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF49C7C8-BF0D-421C-84E7-9F8CAD612A28}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF49C7C8-BF0D-421C-84E7-9F8CAD612A28}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF49C7C8-BF0D-421C-84E7-9F8CAD612A28}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{EF49C7C8-BF0D-421C-84E7-9F8CAD612A28} = {8C708156-39E4-43EA-9E5B-C303697F355A}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {75B18AFB-9317-477F-A577-6C53DA0AE67C}
+	EndGlobalSection
+EndGlobal
