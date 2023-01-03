@@ -1,10 +1,10 @@
-﻿using E_bike_Inventory_and_Sales.Commands;
+﻿using E_bike_Inventory_and_Sales.Commands.CustomerCommands;
 using E_bike_Inventory_and_Sales.Dto.Request;
 using E_bike_Inventory_and_Sales.Dto.Response;
 using E_bike_Inventory_and_Sales.Entity;
 using E_bike_Inventory_and_Sales.Queries;
+using E_bike_Inventory_and_Sales.Queries.CustomerQueries;
 using MediatR;
-using Microsoft.AspNetCore.Components.Forms;
 using Microsoft.AspNetCore.Mvc;
 using Swashbuckle.AspNetCore.Annotations;
 
@@ -75,7 +75,7 @@ namespace E_bike_Inventory_and_Sales.Controllers.V1
             Summary = "Updates a customer's details",
             Description = "Updates a customer's details")]
         [HttpPut]
-        public async Task<Customer> UpdateCustomer(Customer customer)
+        public async Task<Customer> UpdateCustomer(CustomerDtoReq customer)
         {
             try
             {

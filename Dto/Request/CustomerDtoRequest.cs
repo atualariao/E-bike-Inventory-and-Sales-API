@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace E_bike_Inventory_and_Sales.Dto.Request
 {
-    public class CustomerDto : CustomerDtoRequest
+    public class CustomerDtoReq : CustomerDtoRequest
     {
         public int Id { get; set; }
         public Debt? Debt { get; set; }

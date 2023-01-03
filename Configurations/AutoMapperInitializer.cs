@@ -10,7 +10,14 @@ namespace E_bike_Inventory_and_Sales.Configurations
         public AutoMapperInitializer()
         {
             CreateMap<Customer, CustomerDtoRequest>().ReverseMap();
+            CreateMap<Customer, CustomerDtoReq>().ReverseMap();
             CreateMap<Customer, CustomerDtoResponse>().ReverseMap();
+            CreateMap<Customer, CustomerDtoRes>().ReverseMap();
+
+            CreateMap<Debt, DebtDtoRequest>().ReverseMap();
+            CreateMap<Debt, DebtDtoReq>().ReverseMap();
+            CreateMap<Debt, DebtDtoResponse>().ReverseMap();
+            CreateMap<Debt, DebtDtoRes>().ReverseMap();
         }
     }
 }
