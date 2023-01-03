@@ -1,4 +1,6 @@
-﻿using E_bike_Inventory_and_Sales.Commands;
+﻿using AutoMapper;
+using E_bike_Inventory_and_Sales.Commands;
+using E_bike_Inventory_and_Sales.Dto.Request;
 using E_bike_Inventory_and_Sales.Entity;
 using E_bike_Inventory_and_Sales.Interface;
 using MediatR;
@@ -9,8 +11,10 @@ namespace E_bike_Inventory_and_Sales.Handlers
     {
         private readonly ICustomerRepository _customerRepository;
 
-        public UpdateCustomerCommandHandler(ICustomerRepository customerRepository) => _customerRepository = customerRepository;
-
+        public UpdateCustomerCommandHandler(ICustomerRepository customerRepository, IMapper mapper)
+        {
+            _customerRepository = customerRepository;
+        }
         public async Task<Customer> Handle(UpdateCustomerCommand request, CancellationToken cancellationToken)
         {
             var updateCustomer = new Customer()

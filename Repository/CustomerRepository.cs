@@ -3,6 +3,7 @@ using E_bike_Inventory_and_Sales.Data;
 using E_bike_Inventory_and_Sales.Entity;
 using E_bike_Inventory_and_Sales.Interface;
 using Microsoft.EntityFrameworkCore;
+using System.Xml.Linq;
 
 namespace E_bike_Inventory_and_Sales.Repository
 {
@@ -74,20 +75,20 @@ namespace E_bike_Inventory_and_Sales.Repository
             }
         }
 
-        public async Task<Customer> UpdateCustomer(Customer customer)
+        public async Task<Customer> UpdateCustomer(Customer updateCustomer)
         {
             try
             {
-                var updateCustomer = await _context.Customers.FindAsync(customer.Id);
-                updateCustomer.Name = customer.Name;
-                updateCustomer.Email = customer.Email;
-                updateCustomer.Phone = customer.Phone;
-                updateCustomer.Address = customer.Address;
+                var currentCustomer = await _context.Customers.FindAsync(updateCustomer.Id);
+                currentCustomer.Name = updateCustomer.Name;
+                currentCustomer.Email = updateCustomer.Email;
+                currentCustomer.Phone = updateCustomer.Phone;
+                currentCustomer.Address = updateCustomer.Address;
 
-                _context.Customers.Update(updateCustomer);
+                _context.Customers.Update(currentCustomer);
                 await _context.SaveChangesAsync();
 
-                return customer;
+                return updateCustomer;
             }
             catch (Exception)
             {

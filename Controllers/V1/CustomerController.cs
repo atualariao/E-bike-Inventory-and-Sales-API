@@ -1,4 +1,6 @@
 ﻿using E_bike_Inventory_and_Sales.Commands;
+using E_bike_Inventory_and_Sales.Dto.Request;
+using E_bike_Inventory_and_Sales.Dto.Response;
 using E_bike_Inventory_and_Sales.Entity;
 using E_bike_Inventory_and_Sales.Queries;
 using MediatR;
@@ -25,7 +27,7 @@ namespace E_bike_Inventory_and_Sales.Controllers.V1
             Summary = "Returns all Customers",
             Description = "Returns all Customers")]
         [HttpGet]
-        public async Task<List<Customer>> GetCustomerList()
+        public async Task<List<CustomerDtoResponse>> GetCustomerList()
         {
             try
             {
@@ -41,7 +43,7 @@ namespace E_bike_Inventory_and_Sales.Controllers.V1
             Summary = "Returns a specific user",
             Description = "Returns a specific user")]
         [HttpGet("id")]
-        public async Task<Customer> GetSpecificCustomer(int id)
+        public async Task<CustomerDtoResponse> GetSpecificCustomer(int id)
         {
             try
             {
@@ -57,7 +59,7 @@ namespace E_bike_Inventory_and_Sales.Controllers.V1
             Summary = "Creates a new user",
             Description = "Creates a new user")]
         [HttpPost]
-        public async Task<Customer> CreateCustomer(Customer customer)
+        public async Task<Customer> CreateCustomer(CustomerDtoRequest customer)
         {
             try
             {
