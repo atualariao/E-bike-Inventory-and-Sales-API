@@ -1,6 +1,6 @@
 ﻿using E_bike_Inventory_and_Sales.Entity;
 
-namespace E_bike_Inventory_and_Sales.Interface
+namespace E_bike_Inventory_and_Sales.Repository
 {
     public interface ISaleRepository
     {

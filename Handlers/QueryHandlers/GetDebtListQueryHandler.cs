@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
 using E_bike_Inventory_and_Sales.Dto.Response;
-using E_bike_Inventory_and_Sales.Interface;
 using E_bike_Inventory_and_Sales.Queries.CustomerQueries;
 using E_bike_Inventory_and_Sales.Queries.DebtQueries;
+using E_bike_Inventory_and_Sales.Repository;
 using MediatR;
 
 namespace E_bike_Inventory_and_Sales.Handlers.QueryHandlers

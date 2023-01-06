@@ -1,6 +1,6 @@
 ﻿using E_bike_Inventory_and_Sales.Commands.CustomerCommands;
 using E_bike_Inventory_and_Sales.Entity;
-using E_bike_Inventory_and_Sales.Interface;
+using E_bike_Inventory_and_Sales.Repository;
 using MediatR;
 
 namespace E_bike_Inventory_and_Sales.Handlers.CommandHandlers
