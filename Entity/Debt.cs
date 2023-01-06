@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace E_bike_Inventory_and_Sales.Entity
 {
@@ -6,9 +7,9 @@ namespace E_bike_Inventory_and_Sales.Entity
     {
         [Key]
         public int Id { get; set; }
+        [ForeignKey(nameof(Customer))]
         public int CustomerId { get; set; }
         public decimal Amount { get; set; }
         public DateTime Date { get; set; }
-        public Customer Customer { get; set; } = null!;
     }
 }

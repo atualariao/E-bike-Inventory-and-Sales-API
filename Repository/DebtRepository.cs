@@ -56,7 +56,6 @@ namespace E_bike_Inventory_and_Sales.Repository
                 {
                     Id = debt.Id,
                     CustomerId = debt.CustomerId,
-                    Customer = debt.Customer,
                     Amount = debt.Amount,
                     Date = debt.Date
 
@@ -73,6 +72,40 @@ namespace E_bike_Inventory_and_Sales.Repository
             }
         }
 
+        public async Task<Debt> UpdateDebt(Debt updateDebt)
+        {
+            try
+            {
+                var currentDebt = await _context.Debts.FindAsync(updateDebt.Id);
+                currentDebt.Amount = updateDebt.Amount;
+                currentDebt.CustomerId = updateDebt.CustomerId;
 
+                _context.Debts.Update(currentDebt);
+                await _context.SaveChangesAsync();
+
+                return updateDebt;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        public async Task<Debt> DeleteDebt(int id)
+        {
+            try
+            {
+                var debt = _context.Debts.Find(id);
+
+                _context.Debts.Remove(debt);
+                await _context.SaveChangesAsync();
+
+                return debt;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
     }
 }

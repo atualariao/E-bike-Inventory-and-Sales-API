@@ -9,28 +9,28 @@ using MediatR;
 
 namespace E_bike_Inventory_and_Sales.Handlers.CommandHandlers
 {
-    public class CreateDebtCommandHandler : IRequestHandler<CreateDebtCommand, Debt>
+    public class UpdateDebtCommandHandler : IRequestHandler<UpdateDebtCommand, Debt>
     {
         private readonly IDebtRepository _debtRepository;
         private readonly IMapper _mapper;
 
-        public CreateDebtCommandHandler(IDebtRepository debtRepository, IMapper mapper)
+        public UpdateDebtCommandHandler(IDebtRepository debtRepository, IMapper mapper)
         {
             _debtRepository = debtRepository;
             _mapper = mapper;
         }
 
-        public async Task<Debt> Handle(CreateDebtCommand request, CancellationToken cancellationToken)
+        public async Task<Debt> Handle(UpdateDebtCommand request, CancellationToken cancellationToken)
         {
-            var debtDto = new DebtDtoRequest()
+            var updateDebt = new DebtDtoReq()
             {
+                Id = request.Debt.Id,
                 Amount = request.Debt.Amount,
                 CustomerId = request.Debt.CustomerId,
-                Date = DateTime.Now
             };
 
-            Debt debt = _mapper.Map<Debt>(debtDto);
-            return await _debtRepository.CreateDebt(debt);
+            Debt debt = _mapper.Map<Debt>(updateDebt);
+            return await _debtRepository.UpdateDebt(debt);
         }
 
     }

@@ -13,6 +13,5 @@ namespace E_bike_Inventory_and_Sales.Entity
         public DateTime Date { get; set; }
         [ForeignKey(nameof(Customer))]
         public int CustomerId { get; set; }
-        public Customer Customer { get; set; } = null!;
     }
 }

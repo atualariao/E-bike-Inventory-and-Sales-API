@@ -60,11 +60,11 @@ namespace E_bike_Inventory_and_Sales.Controllers.V1
                     Summary = "Creates a new debt",
                     Description = "Creates a new debt")]
         [HttpPost]
-        public async Task<Debt> CreateDebt(DebtDtoRequest customer)
+        public async Task<Debt> CreateDebt(DebtDtoRequest debt)
         {
             try
             {
-                return await _sender.Send(new CreateDebtCommand(customer));
+                return await _sender.Send(new CreateDebtCommand(debt));
             }
             catch (Exception)
             {
@@ -72,6 +72,38 @@ namespace E_bike_Inventory_and_Sales.Controllers.V1
             }
         }
 
+        [SwaggerOperation(
+                    Summary = "Updates a debt's details",
+                    Description = "Updates a debt's details")]
+        [HttpPut]
+        public async Task<Debt> UpdateDebt(DebtDtoReq debt)
+        {
+            try
+            {
+                return await _sender.Send(new UpdateDebtCommand(debt));
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        [SwaggerOperation(
+                    Summary = "Deletes a debt",
+                    Description = "Deletes a debt")]
+        [HttpDelete("id")]
+        public async Task<Debt> Delete(int id)
+        {
+            try
+            {
+                return await _sender.Send(new DeleteDebtCommand(id));
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+
+        }
 
     }
 }
