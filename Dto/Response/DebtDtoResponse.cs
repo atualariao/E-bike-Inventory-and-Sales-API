@@ -1,4 +1,4 @@
-﻿using E_bike_Inventory_and_Sales.Entity;
+﻿using E_bike_Inventory_and_Sales.Data;
 using System.ComponentModel.DataAnnotations;
 
 namespace E_bike_Inventory_and_Sales.Dto.Response
