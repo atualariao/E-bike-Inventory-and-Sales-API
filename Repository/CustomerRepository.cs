@@ -1,6 +1,5 @@
 ﻿using Dapper;
 using E_bike_Inventory_and_Sales.Data;
-using E_bike_Inventory_and_Sales.Entity;
 using Microsoft.EntityFrameworkCore;
 using System.Xml.Linq;
 

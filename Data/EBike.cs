@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace E_bike_Inventory_and_Sales.Entity
+namespace E_bike_Inventory_and_Sales.Data
 {
     public class EBike
     {

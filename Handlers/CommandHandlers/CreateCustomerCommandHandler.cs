@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using E_bike_Inventory_and_Sales.Commands.CustomerCommands;
+using E_bike_Inventory_and_Sales.Data;
 using E_bike_Inventory_and_Sales.Dto.Request;
-using E_bike_Inventory_and_Sales.Entity;
 using E_bike_Inventory_and_Sales.Repository;
 using MediatR;
 

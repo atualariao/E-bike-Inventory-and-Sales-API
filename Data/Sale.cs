@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace E_bike_Inventory_and_Sales.Entity
+namespace E_bike_Inventory_and_Sales.Data
 {
     public class Sale
     {

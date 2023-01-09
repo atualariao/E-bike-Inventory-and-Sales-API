@@ -1,5 +1,5 @@
 ﻿using E_bike_Inventory_and_Sales.Commands.DebtCommands;
-using E_bike_Inventory_and_Sales.Entity;
+using E_bike_Inventory_and_Sales.Data;
 using E_bike_Inventory_and_Sales.Repository;
 using MediatR;
 
